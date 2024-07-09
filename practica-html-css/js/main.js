@@ -9,7 +9,7 @@
     const contenedorArticulos = document.querySelector("#contenedor-articulos");
     const articulosDb = [
         {
-            img: '"https://www.trabajo.gob.hn/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-31-at-9.44.59-AM-768x507.jpeg"',
+            img: 'https://www.trabajo.gob.hn/wp-content/uploads/2024/06/DSC_8275-1024x487.jpg',
             title: 'Es Oficial: SIHCAL ya fue publicado en la Gaceta',
             date: 'feb, 1 2024 | Noticias',
             description: 'Hola como estamos'
@@ -35,7 +35,7 @@
 
     const agregarArticulos = (articulo) => {
         let{ img,title,date,description} = articulo;
-        contenedorArticulos.innerHTML = `<article>
+        contenedorArticulos.innerHTML += `<article>
                 <img src= "${img}" alt="imagen de la gaceta">
                 <h2>${title}</h2>
                 <p>${date}</p>
@@ -43,7 +43,10 @@
             </article>`;
     }
 
-    agregarArticulos(articulosDb[1]);
+    articulosDb.map((articulo) => {
+        agregarArticulos(articulo);
+    });
+    
 
 
 
