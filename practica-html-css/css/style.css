@@ -47,8 +47,7 @@
 
  .main-content{
     display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
+    flex-direction: column;
  }
 
  .content{
@@ -148,3 +147,26 @@
    height:400px;
    
 }
+
+/* Diseño responsivo */
+
+/* PARA TABLET */
+@media (min-width: 768px){
+
+   .main-content{
+      display: flex;
+      flex-direction: row;
+   }
+}
+
+/* PARA ESCRITORIO */
+@media (min-width: 1200px){
+  
+   .main-content{
+      max-width: 960px;
+   }
+   .footer{
+      max-width: 960px;
+   }
+}
+   

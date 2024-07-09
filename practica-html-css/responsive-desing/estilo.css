@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c1, .c2, .c3, .c4, .c5{
+    width: 100%;
+    min-width: 150px;
+    height: 150px;
+
+}
+
+.c1{
+    background-color: blue
+}
+
+.c2{
+    background-color: rgb(95, 156, 235)
+}
+
+.c3{
+    background-color: rgb(105, 105, 211)
+}
+
+.c4{
+    background-color: rgb(38, 38, 97)
+}
+
+.c5{
+    background-color: rgb(165, 202, 250)
+}
+
+/* Diseño responsivo */
+
+/* PARA TABLET */
+@media (min-width: 768px){
+    .c2, .c3, .c4{
+        width: 50%;
+    }
+}
+
+/* PARA ESCRITORIO */
+@media (min-width: 1200px){
+   
+    .c2, .c3, .c4{
+        width: 25%;
+    }
+
+
+    
+}
