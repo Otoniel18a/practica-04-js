@@ -1,101 +1,114 @@
 * {
-    margin:0; 
-    padding: 0;
-    box-sizing: border-box;
-
-
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
- body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
 
-    
- }
- .header{
-    text-align: center;
-    width: 100%;
-
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 1.6;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-height: 100vh;
 }
- .nav{
-    background-color: aqua;
-    color:white;
 
+header {
+   text-align: center;
+   width: 100%;
+}
 
- }
- .nav ul{
-    display: flex;
-    justify-content: center;
-    list-style: none;
- }
+.nav {
+   background-color: #59D0E1;
+   color: white;
+}
 
- .nav ul li{
-    padding: 1rem 2rem;
-    transition: all ease 0.8s;
-    border: solid white 1px;
- }
+.nav ul {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+}
 
- .nav ul li a{
-    color: white ;
-    font-weight:bold ;
-    text-decoration: none;
- }
+.nav ul li {
+   padding: 1rem 2rem;
+   transition: all ease 0.8s;
+   border: solid white 1px;
+}
 
- .nav ul li:hover{
-    background-color: #cf2e2e;
+.nav ul li a {
+   color: white;
+   font-weight: bold;
+   text-decoration: none;
+}
 
- }
+.nav ul li:hover {
+   background-color: #cf2e2e;
+}
 
- .main-content{
-    display: flex;
-    flex-direction: column;
- }
+.main-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
 
- .content{
-    flex: 3;
-    padding: 1rem;
+.content {
+   flex: 3;
+   padding: 1rem;
+   width: 100%;
+   max-width: 1200px; /* Limita el ancho máximo del contenido */
+}
 
- }
- .content article{
-    margin-bottom: 2rem;
+.content article {
+   margin-bottom: 2rem;
+}
 
- }
- .content img{
-    max-width: 100%;
-    height: auto;
- }
+.content img {
+   max-width: 100%;
+   height: auto;
+}
 
- .sidebar{
-    flex: 1;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 15px;
- }
- .sidebar .widget{
-    margin-bottom: 1rem;
- }
- .sidebar button{
-    width: 100%;
-    padding: 1rem;
-    background-color: aqua;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
- }
- .footer{
-    background-color: #cf2e2e;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    
- }
+.sidebar {
+   flex: 1;
+   padding: 1rem;
+   background-color: white;
+   border-radius: 15px;
+   width: 100%;
+   max-width: 300px; /* Limita el ancho máximo de la barra lateral */
+}
 
- .formulario {
-   background-color: azure ;
+.sidebar .widget {
+   margin-bottom: 1rem;
+}
+
+.sidebar button {
+   width: 100%;
+   padding: 1rem;
+   background-color: #59D0E1;
+   border: none;
+   cursor: pointer;
+   color: white;
+   font-weight: bold;
+}
+
+.footer {
+   background-color: #509ce2;
+   color: white;
+   text-align: center;
+   padding: 1rem;
+   width: 100%;
+   position: relative; 
+   bottom: 0;
+   box-sizing: border-box;
+}
+
+.formulario {
+   background-color: azure;
    padding: 20px;
    border-radius: 8px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   width: 300px;
+   width: 100%;
+   max-width: 300px;
 }
 
 .form-group {
@@ -133,40 +146,41 @@
 
 .denuncias {
    margin-top: 1rem;
-   background-color: azure ;
+   background-color: azure;
    padding: 20px;
    border-radius: 8px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   width: 300px;
+   width: 100%;
+   max-width: 300px;
 }
 
 .denuncias img {
-   position: relative;
    width: 100%;
-   max-width: 600px;
-   height:400px;
-   
+   max-width: 300px;
+   height: 100px;
 }
-
+.parrafo {
+   text-align: center;
+   color: #3c536b;
+   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+}
 /* Diseño responsivo */
 
 /* PARA TABLET */
-@media (min-width: 768px){
-
-   .main-content{
-      display: flex;
-      flex-direction: row;
+@media (min-width: 768px) {
+   .main-content {
+       flex-direction: row;
+       justify-content: center;
+       align-items: flex-start;
    }
 }
 
 /* PARA ESCRITORIO */
-@media (min-width: 1200px){
-  
-   .main-content{
-      max-width: 960px;
+@media (min-width: 1200px) {
+   .main-content {
+       max-width: 1200px;
    }
-   .footer{
-      max-width: 960px;
+   .footer {
+       max-width: 1200px;
    }
 }
-   

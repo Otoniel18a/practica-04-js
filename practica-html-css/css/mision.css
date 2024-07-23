@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+ }
+ 
+ header {
+    text-align: center;
+    width: 100%;
+ }
+ 
+ .nav {
+    background-color: #59D0E1;
+    color: white;
+ }
+ 
+ .nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+ }
+ 
+ .nav ul li {
+    padding: 1rem 2rem;
+    transition: all ease 0.8s;
+    border: solid white 1px;
+ }
+ 
+ .nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+ }
+ 
+ .nav ul li:hover {
+    background-color: #cf2e2e;
+ }
+ 
+ .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+ }
+
+ .content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+ 
+ .content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    text-align: justify;
+ }
+
+ .content-wide {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 2rem;
+    width: calc(100% - 4rem); /* Ajusta el ancho para tener márgenes */
+    text-align: justify; /* Ajusta el texto para alinearlo a la izquierda y derecha */
+    flex-wrap: wrap;
+}
+
+.content h2, .content-wide h2 {
+    text-align: center;
+    color: #509ce2;
+}
+ 
+ .content article {
+    margin-bottom: 2rem;
+ }
+ 
+ .content img {
+    max-width: 100%;
+    height: auto;
+ }
+ 
+ .footer {
+    background-color: #cf2e2e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+ }
+ 
+
+ /* Diseño responsivo */
+ 
+ /* PARA TABLET */
+ @media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+ }
+ 
+ /* PARA ESCRITORIO */
+ @media (min-width: 1200px) {
+    .main-content {
+        max-width: 1200px;
+    }
+    .footer {
+        max-width: 1200px;
+    }
+ }
